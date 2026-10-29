@@ -1,0 +1,20 @@
+camera_node:
+  ros__parameters:
+    source: "0"          # indeks webcam ("0") atau path file video
+    fps: 20.0
+    width: 320
+    height: 240
+    mirror: false        # true = cermin horizontal (enak untuk webcam)
+
+game_node:
+  ros__parameters:
+    # Default: warna HIJAU. Sesuaikan dengan objekmu (pakai hsv_calibrator).
+    hsv_lower: [18, 40, 100]
+    hsv_upper: [38, 255, 255]
+    num_balls: 3
+    hold_duration: 2.0
+    ball_radius: 60
+    ball_speed: 40.0
+    min_area: 150
+    smoothing_alpha: 0.5  # 1.0 = tanpa smoothing, makin kecil makin halus
+    speed_increase_per_score: 0.0  # bonus: tambah kecepatan tiap skor (px/s)
